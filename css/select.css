@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: #fff;
+}
+
+a:-moz-any-link {
+  color: #fff;
+}
+
+a:any-link {
+  color: #fff;
+}
+
+ul li {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* -------- */
+
+body {
+  padding: 100px;
+}
+
+.select {
+  width: 200px;
+}
+
+.select__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+  background: darkorange;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.select__svg {
+  -webkit-transform: rotate3d(0, 0, 1, 90deg);
+          transform: rotate3d(0, 0, 1, 90deg);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.select__rotate {
+  -webkit-transform: rotateZ(90deg) rotateY(180deg);
+          transform: rotateZ(90deg) rotateY(180deg);
+}
+
+.select__container::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select__container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select__container {
+  background: darkorange;
+  border-radius: 8px;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.select_is_active {
+  max-height: 140px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.select__items {
+  height: 100%;
+}
+
+.select__option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select__option:hover {
+  background: grey;
+}
